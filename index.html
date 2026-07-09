@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul8</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            margin:0;
+        }
+        .calculator{
+            background-color: #333;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+        }
+        #display{
+            width:100%;
+            height:50px;
+            background-color:#fff;
+            font-size:30px;
+            text-align:right;
+            padding:5px;
+            box-sizing:border-box;
+            margin-bottom:20px;
+            border:2px solid #999;
+        }
+        .buttons{
+            display:grid;
+            grid-template-columns: repeat(4,1fr);
+            gap:10px;
+        }
+        button{
+            width:60px;
+            height:60px;
+            font-size: 20px;
+            cursor:pointer;
+            background-color: #eee;
+        }
+    </style>
+    <head>
+        <div class="calculator">
+            <input type="text" id="display" readonly value="0">
+
+            <div class="buttons">
+                <button class="clear" onclick="clearDisplay()">C</button>
+                <button onclick="pressNum('/')" class="operator">/</button>
+                <button onclick="pressNum('*')" class="operator">*</button>
+                <button onclick="pressNum('-')" class="operator">-</button>
+
+                <button onclick="pressNum('7')">7</button>
+                <button onclick="pressNum('8')">8</button>
+                <button onclick="pressNum('9')">9</button>
+                <button onclick="pressNum('+')" class="operator">+</button>
+
+                <button onclick="pressNum('4')">4</button>
+                <button onclick="pressNum('5')">5</button>
+                <button onclick="pressNum('6')">6</button>
+                <button style="visibility: hidden;"></button>
+
+                <button onclick="pressNum('1')">1</button>
+                <button onclick="pressNum('2')">2</button>
+                <button onclick="pressNum('3')">3</button>
+                <button onclick="calculate()" class="operator" style="grid-row: span 2;height: 130px;">=</button>
+                
+                <button onclick="pressNum('0')" style="grid-column: span 2; width: 130px;">0</button>
+                <button onclick="pressNum('.')">.</button>
+            </div>
+        </div>
+    </head>
+</html>
