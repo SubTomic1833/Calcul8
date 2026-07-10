@@ -41,6 +41,23 @@
             font-size: 20px;
             cursor:pointer;
             background-color: #eee;
+            border:none;
+            border-radius:25px;
+        }
+        button:hover{
+            background-color: #ddd;
+        }
+        .operator{
+            background-color:#ff9500;
+        }
+        .operator:hover{
+            background-color: #e08400;
+        }
+        .clear{
+            background-color: #ff3b30;
+        }
+        .clear:hover{
+            background-color: #d32f2f;
         }
     </style>
     <head>
@@ -72,5 +89,25 @@
                 <button onclick="pressNum('.')">.</button>
             </div>
         </div>
+        <script>
+            var display=document.getElementById("display");
+            function pressNum(x){
+                if(display.value==="0"){
+                    display.value=x;
+                }else{
+                    display.value=display.value+x;
+                }
+            }
+            function clearDisplay(){
+                display.value="0";
+            }
+            function calculate(){
+                try{
+                    display.value=eval(display.value);
+                }catch(err){
+                    display.value="Error";
+                }
+            }
+        </script>
     </head>
 </html>
