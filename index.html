@@ -5,7 +5,7 @@
     <title>Calcul8</title>
     <style>
         body{
-            font-family: "Inter", sans-serif;
+            font-family: "JetBrains Mono", monospace;
             background-color: #66635b;
             display:flex;
             justify-content:center;
@@ -19,8 +19,7 @@
             height:440px;
             padding:23px;
             border-radius:10px;
-            border:1px solid white;
-            box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+            box-shadow:10px 10px 10px rgba(0,0,0,0.3);
         }
         .container{
             display:flex;
@@ -34,6 +33,7 @@
             font-weight:bold;
             color:#ffffff;
             letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(168, 105, 45, 0.6);
         }
         #display{
             width:100%;
@@ -46,6 +46,7 @@
             margin-bottom:20px;
             border:2px solid #999;
             border-radius:15px;
+            font-family:"JetBrains Mono", monospace;
         }
         .buttons{
             display:grid;
@@ -63,6 +64,7 @@
             border-radius:20px;
             box-shadow: 0 4px 0 #999;
             transition:transform 0.05s, box-shadow 0.05s;
+            font-family:"JetBrains Mono", monospace;
         }
         button:hover{
             background-color: #ddd;
@@ -85,7 +87,7 @@
         }
     </style>
     <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
         <audio id="clickSound" src="click2.mp3"></audio>
         <div class="container">
             <h1 class="title">Calcul8</h1>
