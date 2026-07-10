@@ -5,8 +5,8 @@
     <title>Calcul8</title>
     <style>
         body{
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: "Inter", sans-serif;
+            background-color: #66635b;
             display:flex;
             justify-content:center;
             align-items:center;
@@ -15,20 +15,24 @@
         }
         .calculator{
             background-color: #333;
-            padding:20px;
+            width:320px;
+            height:440px;
+            padding:23px;
             border-radius:10px;
+            border:1px solid white;
             box-shadow:5px 5px 5px rgba(0,0,0,0.3);
         }
         .container{
             display:flex;
             flex-direction: column;
             align-items:center;
+            transform:translateY(-50px);
         }
         .title{
             margin-bottom:40px;
             font-size:60px;
             font-weight:bold;
-            color:#333;
+            color:#ffffff;
             letter-spacing: 2px;
         }
         #display{
@@ -45,17 +49,18 @@
         }
         .buttons{
             display:grid;
-            grid-template-columns: repeat(4,3fr);
-            gap:10px;
+            grid-template-columns: repeat(4,60px);
+            row-gap:10px;
+            column-gap:20px;
         }
         button{
             width:60px;
             height:60px;
-            font-size: 20px;
+            font-size: 25px;
             cursor:pointer;
             background-color: #eee;
             border:none;
-            border-radius:25px;
+            border-radius:20px;
             box-shadow: 0 4px 0 #999;
             transition:transform 0.05s, box-shadow 0.05s;
         }
@@ -80,6 +85,7 @@
         }
     </style>
     <head>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
         <audio id="clickSound" src="click2.mp3"></audio>
         <div class="container">
             <h1 class="title">Calcul8</h1>
