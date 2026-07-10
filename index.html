@@ -68,6 +68,7 @@
         }
     </style>
     <head>
+        <audio id="clickSound" src="click2.mp3"></audio>
         <div class="calculator">
             <input type="text" id="display" readonly value="0">
 
@@ -98,7 +99,13 @@
         </div>
         <script>
             var display=document.getElementById("display");
+            var clickSound=document.getElementById("clickSound");
+            function playCSound(){
+                clickSound.currentTime=0;
+                clickSound.play();
+            }
             function pressNum(x){
+                playCSound();
                 if(display.value==="0"){
                     display.value=x;
                 }else{
@@ -106,9 +113,11 @@
                 }
             }
             function clearDisplay(){
+                playCSound();
                 display.value="0";
             }
             function calculate(){
+                playCSound();
                 try{
                     display.value=eval(display.value);
                 }catch(err){
