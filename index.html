@@ -161,10 +161,15 @@
             }
             function pressNum(x){
                 playCSound();
+                if(display.value==="Error"){
+                    display.value=x;
+                    return;
+                }
                 if(display.value==="0"){
                     display.value=x;
-                }else{
-                    display.value=display.value+x;
+                }
+                else{
+                    display.value+=x;
                 }
             }
             function clearDisplay(){
